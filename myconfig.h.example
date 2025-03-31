@@ -1,0 +1,41 @@
+/*
+ *  Rename this example to 'myconfig.h' and fill in your details.
+ *  The local config is in the '.gitignore' file, which helps to keep details secret.
+ */
+
+/*
+ * Hostname in ST modes, plus name of the network port in ArduinoIDE
+ */
+#define MDNS_NAME "hampton-bay-fan-controller"
+
+/*
+ *    WiFi Settings
+ */
+#define WIFI_SSID "YOUR-SSID"
+#define WIFI_PASS "YOUR-PWD"
+
+/*
+ * Over The Air firmware updates can be disabled by uncommenting the folowing line
+ * When enabled the device will advertise itself using the MDNS_NAME defined above
+ */
+// #define NO_OTA
+
+/*
+ * OTA can be password protected to prevent the device being hijacked
+ */
+// #define OTA_PASSWORD "SuperVisor"
+
+/*
+ * TelnetStream allows for remote debugging w/out a connected serial port
+ */
+#define USE_TELNET_STREAM true
+
+// Configure MQTT broker settings
+#define MQTT_HOST "mqtt.yoursite.you"
+#define MQTT_PORT 1883
+#define MQTT_USER ""
+#define MQTT_PASS ""
+#define MQTT_CLIENT_NAME "HAMPTONBAY-GUESTROOM"
+
+// Common root for all MQTT topics. (Suffixes added to this in the .ino file)
+#define BASE_TOPIC "home/rooms/guestroom/hampton-bay-fan"
